@@ -71,13 +71,13 @@ function getVoiceStream(text, {lang = 'pt-BR', slow = false, host = 'https://tra
  * @param {string} filePath
  * @param {string} text
  * @param {PlainObject} cfg
- * @param {Language} [cfg.lang="en-GB"]
+ * @param {Language} [cfg.lang="pt-BR"]
  * @param {number} [cfg.slow=false]
  * @param {string} cfg.host
  * @param {number} cfg.timeout
  * @param {string} cfg.splitPunct
  */
-function saveToFile(filePath, text, {lang = 'en-GB', slow = false, host, timeout, splitPunct} = {}) {
+function saveToFile(filePath, text, {lang = 'pt-BR', slow = false, host, timeout, splitPunct} = {}) {
     const stream = new Stream.PassThrough();
     const writeStream = fs.createWriteStream(filePath);
     downloadFromInfoCallback(stream, text, {lang, slow, host, timeout, splitPunct });
