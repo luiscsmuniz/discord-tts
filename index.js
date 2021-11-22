@@ -61,7 +61,7 @@ function downloadFromInfoCallback(stream, text, {lang, slow, host, timeout, spli
  * @param {number} cfg.timeout
  * @param {string} cfg.splitPunct
  */
-function getVoiceStream(text, {lang = 'pt-BR', slow = false, host = 'https://translate.google.com', timeout = 10000, splitPunct} = {}) {
+function getVoiceStream(text, {lang = 'en', slow = false, host = 'https://translate.google.com', timeout = 10000, splitPunct} = {}) {
     const stream = new Stream.PassThrough();
     downloadFromInfoCallback(stream, text, {lang, slow, host, timeout, splitPunct });
     return stream;
